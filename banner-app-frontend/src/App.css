@@ -1,0 +1,54 @@
+/* nothing to see here */
+
+* {
+	box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    /* display: flex */
+    height: 5vh;
+    min-height: 40px;
+    max-height: 54px;
+    padding: 5px 10px;
+    /* max-height: 80px; */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo-image {
+    min-height: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-name {
+    min-height: 40px;
+}
+
+
+.navigation > ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.pageLink {
+    padding: 5px 10px;
+    text-decoration: underline;
+    
+}
