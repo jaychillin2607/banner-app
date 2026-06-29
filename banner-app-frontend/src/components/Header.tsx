@@ -9,7 +9,7 @@ function Header({
 	setCurrentPage: (page: PageType) => void;
 }) {
 	return (
-		<header>
+		<header className="header">
 			<Box className="navbar">
                 <Box className="logo">
 				<img src="/favicon.svg" alt="banner icon" className="logo-image"/>

@@ -19,7 +19,7 @@ function App() {
 			break;
 	}
 	return (
-		<main className="app">
+		<main id="app">
 			<Header setCurrentPage={setCurrentPage} />
 			<Page >
 				<RenderPage />
