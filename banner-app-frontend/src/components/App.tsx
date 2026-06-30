@@ -21,7 +21,7 @@ function App() {
 	return (
 		<main id="app">
 			<Header setCurrentPage={setCurrentPage} />
-			<Page >
+			<Page>
 				<RenderPage />
 			</Page>
 		</main>

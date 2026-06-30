@@ -13,9 +13,21 @@
 }
 
 .flex-column-center {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 #root {
@@ -79,22 +91,15 @@
 	color: white;
 }
 
-.banner > .box {
-    width: 100%;
+.banner > .box,
+.about > .box {
+	width: 100%;
+	text-align: center;
 }
 
 .about {
 	background-color: beige;
 	height: 100%;
 	width: 100%;
-    border-top: solid #bbb 1px;
-}
-
-.about > .box {
-    width: 100%;
-}
-
-
-#canvas-input {
-    visibility: hidden;
+	border-top: solid #bbb 1px;
 }
