@@ -6,9 +6,9 @@ function Box({
 	children,
 }: {
 	className?: string;
-	children: React.ReactElement[];
+	children: React.ReactNode;
 }) {
-	return <div className={cleanCSS("box", className)}>{...children}</div>;
+	return <div className={cleanCSS("box", className)}>{children}</div>;
 }
 
 export default Box;

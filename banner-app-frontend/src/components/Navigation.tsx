@@ -13,7 +13,7 @@ function Navbar({
 	};
 	return (
 		<nav className="navigation">
-			<ul>
+			<ul className="flex-row-center">
 				<li className="pageLink" onClick={loadBannerPage}>
 					Banner
 				</li>

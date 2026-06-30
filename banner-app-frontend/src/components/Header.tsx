@@ -11,7 +11,7 @@ function Header({
 	return (
 		<header className="header">
 			<Box className="navbar">
-                <Box className="logo">
+                <Box className="logo flex-row-center">
 				<img src="/favicon.svg" alt="banner icon" className="logo-image"/>
                 <h1 className="logo-name">Banner</h1>
                 </Box>
