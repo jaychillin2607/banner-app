@@ -31,7 +31,7 @@
 }
 
 #root {
-	height: 100vh;
+	height: 100dvh;
 }
 
 #app {
@@ -58,12 +58,13 @@
 
 .logo {
 	padding: 5px;
+    max-width: 40%;
 }
 
 .logo-image {
-	min-height: 40px;
-	height: 100%;
-	width: 100%;
+	min-height: 30px;
+	max-height: 100%;
+    max-width: 30%;
 }
 
 .logo-name {
@@ -95,6 +96,17 @@
 .about > .box {
 	width: 100%;
 	text-align: center;
+	padding: 5px;
+}
+
+.banner > .box > .placeholder-message {
+	font-size: 3rem;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+.banner > .box > .message {
+	font-size: 100px;
 }
 
 .about {
