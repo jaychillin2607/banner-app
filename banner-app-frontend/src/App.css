@@ -2,53 +2,124 @@
 
 * {
 	box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
-header {
-    /* display: flex */
-    height: 5vh;
-    min-height: 40px;
-    max-height: 54px;
-    padding: 5px 10px;
-    /* max-height: 80px; */
+.flex-row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+#root {
+	height: 100dvh;
+    background-color: black;
+}
+
+#app {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	/* display: flex */
+	height: 5vh;
+	min-height: 40px;
+	max-height: 54px;
+	padding: 5px 10px;
+	background-color: beige;
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
 }
 
 .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
+	padding: 5px;
+    max-width: 40%;
 }
 
 .logo-image {
-    min-height: 40px;
-    height: 100%;
-    width: 100%;
+	min-height: 30px;
+	max-height: 100%;
+    max-width: 30%;
 }
 
 .logo-name {
-    min-height: 40px;
+	min-height: 40px;
 }
 
-
-.navigation > ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
+.navigation > ul {
+	height: 100%;
+	list-style-type: none;
 }
 
 .pageLink {
-    padding: 5px 10px;
-    text-decoration: underline;
-    
+	padding: 5px 10px;
+	text-decoration: underline;
+}
+
+.page {
+	flex-grow: 2;
+    height:100%;
+    width: 100%;
+}
+
+.banner {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+.banner > .box,
+.about > .box {
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+}
+
+.banner > .box > .placeholder-message {
+	font-size: 3rem;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+.banner > .box > .message {
+	font-size: 100px;
+}
+
+#banner-input {
+    font-size: 18px;
+    opacity: 0;
+}
+
+.about {
+	background-color: beige;
+	height: 100%;
+	width: 100%;
+	border-top: solid #bbb 1px;
 }
