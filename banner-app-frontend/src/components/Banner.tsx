@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Box from "./Box";
-import { useKeyboardViewport } from "../hooks/useKeyboardViewport";
+// import { useKeyboardViewport } from "../hooks/useKeyboardViewport";
 
 function getBannerDimensions(): number[] | null {
 	let bannerCanvas = document.querySelector(".banner");
