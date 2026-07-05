@@ -32,6 +32,7 @@
 
 #root {
 	height: 100dvh;
+    background-color: black;
 }
 
 #app {
@@ -83,6 +84,8 @@
 
 .page {
 	flex-grow: 2;
+    height:100%;
+    width: 100%;
 }
 
 .banner {
@@ -107,6 +110,11 @@
 
 .banner > .box > .message {
 	font-size: 100px;
+}
+
+#banner-input {
+    font-size: 18px;
+    opacity: 0;
 }
 
 .about {

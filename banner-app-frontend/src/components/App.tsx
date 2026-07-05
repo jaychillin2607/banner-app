@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { type PageType } from "../types/PageType";
+import { type PageType } from "../types/types";
 import "../App.css";
 import Header from "./Header";
 import Page from "./Page";
@@ -18,6 +18,7 @@ function App() {
 			RenderPage = About;
 			break;
 	}
+    
 	return (
 		<main id="app">
 			<Header setCurrentPage={setCurrentPage} />

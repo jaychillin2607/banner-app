@@ -1,5 +1,5 @@
 import type React from "react";
-import { cleanCSS } from "../common/cssUtils";
+import { cleanCSS } from "../helpers/common";
 
 function Box({
 	className,

@@ -1,4 +1,4 @@
-import type { PageType } from "../types/PageType";
+import type { PageType } from "../types/types";
 
 import Navbar from "./Navigation";
 import Box from "./Box";
