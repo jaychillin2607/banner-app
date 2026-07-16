@@ -15,10 +15,10 @@ function Navbar({
 		<nav className="navigation">
 			<ul className="flex-row-center">
 				<li className="pageLink" onClick={loadBannerPage}>
-					Banner
+					<h3>Banner</h3>
 				</li>
 				<li className="pageLink" onClick={loadAboutPage}>
-					About
+					<h3>About</h3>
 				</li>
 			</ul>
 		</nav>
