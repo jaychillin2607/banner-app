@@ -10,13 +10,17 @@ import {
 	getTextSize,
 	removeHeaderInLandscape,
 } from "../helpers/bannerHelpers";
+import { DEVICE_TYPE } from "../configurations/config";
 
 function Banner() {
 	const [bannerInputValue, setBannerInputValue] = useState<string>("");
 	const [messageFontSize, setMessageFontSize] = useState<number>(32);
-
+	const [isBannerInputFocused, setIsBannerInputFocused] =
+		useState<boolean>(false);
 	resizeBannerOnViewportUpdate(useKeyboardViewport());
-	removeHeaderInLandscape(useDisplayOrientation());
+	if (DEVICE_TYPE === "SMARTPHONE") {
+		removeHeaderInLandscape(useDisplayOrientation());
+	}
 
 	let updateBannerOnTyping = (event: React.ChangeEvent<HTMLInputElement>) => {
 		let text = event.target.value;
@@ -45,19 +49,35 @@ function Banner() {
 		document.getElementById("banner-input")?.focus();
 	};
 
+	// input widget
+	let inputWidgetClassNames = "visually-hidden";
+	if (
+		isBannerInputFocused &&
+		(DEVICE_TYPE === "SMARTPHONE" || DEVICE_TYPE === "TABLET")
+	) {
+		inputWidgetClassNames = "sticky-bottom";
+	}
+
 	return (
-		<section className="banner flex-row-center" onClick={focusBannerInput}>
-			<Box className={"flex-column-center"}>
-				{bannerInputValue ? bannerMessage : placeholderMessage}
-				<input
-					id="banner-input"
-					name="banner-input"
-					className="visually-hidden"
-					onChange={updateBannerOnTyping}
-					autoFocus={true}
-				></input>
-			</Box>
-		</section>
+		<>
+			<section className="banner flex-row-center" onClick={focusBannerInput}>
+				<Box className={"flex-column-center"}>
+					{bannerInputValue ? bannerMessage : placeholderMessage}
+				</Box>
+			</section>
+			<input
+				id="banner-input"
+				name="banner-input"
+				className={inputWidgetClassNames}
+				onChange={updateBannerOnTyping}
+				onFocus={() => {
+					setIsBannerInputFocused(true);
+				}}
+				onBlur={() => {
+					setIsBannerInputFocused(false);
+				}}
+			></input>
+		</>
 	);
 }
 

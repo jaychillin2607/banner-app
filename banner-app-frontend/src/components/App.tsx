@@ -18,7 +18,7 @@ function App() {
 			RenderPage = About;
 			break;
 	}
-    
+
 	return (
 		<main id="app">
 			<Header setCurrentPage={setCurrentPage} />

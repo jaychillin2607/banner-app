@@ -11,10 +11,15 @@ function Header({
 	return (
 		<header className="header">
 			<Box className="navbar">
-				<Box className="logo flex-row-center">
+				<a
+					className="logo flex-row-center"
+					onClick={() => {
+						setCurrentPage("BANNER");
+					}}
+				>
 					<img src="/favicon.svg" alt="banner icon" className="logo-image" />
 					<h1 className="logo-name">Banner</h1>
-				</Box>
+				</a>
 
 				<Navbar setCurrentPage={setCurrentPage} />
 			</Box>

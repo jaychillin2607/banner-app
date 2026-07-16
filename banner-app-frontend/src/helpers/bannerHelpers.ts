@@ -102,12 +102,9 @@ export function removeHeaderInLandscape(
 	if (!header) {
 		return;
 	}
-	console.log("before", header.style.display);
 	if (displayOrientation === "PORTRAIT") {
-        header.style.display = "";
-        console.log("PORTRAIT", header.style.display);
+		header.style.display = "";
 	} else {
-        console.log("LANDSCAPE", header.style.display);
 		header.style.display = "none";
 	}
 }
