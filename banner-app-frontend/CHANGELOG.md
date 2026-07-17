@@ -9,6 +9,7 @@
 ### Added 
 - DeviceType: added configuration to determine what's the current device type [DESKTOP/ TABLET/ SMARTPHONE]
 - Input widget: an input widget will appear in SMARTPHONE and TABLET devices when typing
+- added netlify/vite-plugin for free deployment on netlify.com
 
 ### Removed
 
