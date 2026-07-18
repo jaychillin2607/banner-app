@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Box from "./Box";
 import useKeyboardViewport from "../hooks/useKeyboardViewport";
@@ -6,7 +6,7 @@ import useDisplayOrientation from "../hooks/useDisplayOrientation";
 
 import {
 	resizeBannerOnViewportUpdate,
-	getBannerDimensions,
+	getElementDimensions,
 	getTextSize,
 	removeHeaderInLandscape,
 } from "../helpers/bannerHelpers";
@@ -17,14 +17,26 @@ function Banner() {
 	const [messageFontSize, setMessageFontSize] = useState<number>(32);
 	const [isBannerInputFocused, setIsBannerInputFocused] =
 		useState<boolean>(false);
-	resizeBannerOnViewportUpdate(useKeyboardViewport());
+
+	const viewport = useKeyboardViewport();
+	resizeBannerOnViewportUpdate(viewport);
+
+	useEffect(() => {
+		if (bannerInputValue === "") return;
+
+		const dims = getElementDimensions(".banner");
+		if (dims === null) return;
+
+		setMessageFontSize(getTextSize(bannerInputValue, dims));
+	}, [viewport.isKeyboardOpen]);
+
 	if (DEVICE_TYPE === "SMARTPHONE") {
 		removeHeaderInLandscape(useDisplayOrientation());
 	}
 
 	let updateBannerOnTyping = (event: React.ChangeEvent<HTMLInputElement>) => {
 		let text = event.target.value;
-		let bannerDimensions = getBannerDimensions();
+		let bannerDimensions = getElementDimensions(".banner");
 		if (bannerDimensions === null) {
 			return;
 		}
