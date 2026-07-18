@@ -16,3 +16,4 @@
 ### Fixed
 - fixed navbar visibility logic for different device types.
 - set black colour to the body tag -> setting address bar background to black
+- on smartphones, after the keypad is deactivated, the text size does not increase.

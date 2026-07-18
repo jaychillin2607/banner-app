@@ -1,7 +1,7 @@
 import type { DisplayOrientation } from "../types/types";
 
-export function getBannerDimensions(): number[] | null {
-	let bannerCanvas = document.querySelector(".banner");
+export function getElementDimensions(className: string): number[] | null {
+	let bannerCanvas = document.querySelector(className);
 	if (bannerCanvas === null) {
 		console.error("error getting banner canvas");
 		return null;
@@ -70,8 +70,9 @@ export function resizeBannerOnViewportUpdate({
 
 export function getTextSize(text: string, bannerDimensions: number[]): number {
 	const [H, W] = bannerDimensions;
-	let longestWord = getLongestWordLength(text); // +1 for space character
+	let longestWord = getLongestWordLength(text);
 
+	// +1 for space character
 	// height based
 	let fontSizeH = Math.floor(
 		H / Math.ceil(text.length / (longestWord + 1) + 1) / 1.2,

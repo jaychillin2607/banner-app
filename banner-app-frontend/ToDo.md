@@ -1,5 +1,7 @@
 # ToDo 
 ## P0
+- landscape mode navbar disappearance is random on safari
+- on smartphones, after the keypad is deactivated, the text size does not increase. ✅
 - Remove AutoFocus ✅
 - footer colour should be dark in Safari ✅
 - add a way to show input widget static on the bottom of the screen ✅
@@ -16,5 +18,5 @@
 ## P3
 - improve about page 
 - add a footer on about page
-- add copy right and stuff
+- add copyright and stuff
 - look for a better website icon
