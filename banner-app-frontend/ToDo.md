@@ -13,7 +13,7 @@
 
 ## P2
 - improve navbar styling
-- add some partitioning between navbar links
+- add some partitioning between navbar links ✅
 
 ## P3
 - improve about page 

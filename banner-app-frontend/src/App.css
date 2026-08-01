@@ -34,7 +34,7 @@
 
 #root {
 	height: 100dvh;
-	background-color: black;
+	padding-top: env(safe-area-inset-top);
 }
 
 #app {
@@ -45,6 +45,8 @@
 
 .header {
 	/* display: flex */
+	position: sticky;
+	top: 0;
 	height: 5vh;
 	min-height: 40px;
 	max-height: 54px;
@@ -85,6 +87,10 @@
 .pageLink {
 	padding: 5px 10px;
 	text-decoration: underline;
+}
+
+.pageLink:first-child {
+	border-right: 1px solid #666;
 }
 
 .page {
