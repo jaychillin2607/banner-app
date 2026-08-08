@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { Route, Routes } from "react-router";
 
-import { type PageType } from "../types/types";
 import "../App.css";
 import Header from "./Header";
 import Page from "./Page";
@@ -8,22 +7,15 @@ import About from "./About";
 import Banner from "./Banner";
 
 function App() {
-	const [currentPage, setCurrentPage] = useState<PageType>("BANNER");
-	let RenderPage: React.ElementType;
-	switch (currentPage) {
-		case "BANNER":
-			RenderPage = Banner;
-			break;
-		case "ABOUT":
-			RenderPage = About;
-			break;
-	}
-
 	return (
 		<main id="app">
-			<Header setCurrentPage={setCurrentPage} />
+			<Header />
 			<Page>
-				<RenderPage />
+				<Routes>
+					<Route path="banner" element={<Banner />} />
+					<Route path="about" element={<About />} />
+					<Route path="/*" element={<Banner />} />
+				</Routes>
 			</Page>
 		</main>
 	);

@@ -1,24 +1,18 @@
-import type { PageType } from "../types/types";
+import { NavLink } from "react-router";
 
-function Navbar({
-	setCurrentPage,
-}: {
-	setCurrentPage: (page: PageType) => void;
-}) {
-	let loadBannerPage = () => {
-		setCurrentPage("BANNER");
-	};
-	let loadAboutPage = () => {
-		setCurrentPage("ABOUT");
-	};
+function Navbar() {
 	return (
 		<nav className="navigation">
 			<ul className="flex-row-center">
-				<li className="pageLink" onClick={loadBannerPage}>
-					<h3>Banner</h3>
+				<li className="pageLink">
+					<NavLink to="/banner">
+						<h3>Banner</h3>
+					</NavLink>
 				</li>
-				<li className="pageLink" onClick={loadAboutPage}>
-					<h3>About</h3>
+				<li className="pageLink">
+					<NavLink to="/about">
+						<h3>About</h3>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>

@@ -1,0 +1,19 @@
+[build]
+command = "npm run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "22"
+
+# Local `netlify dev` proxies to the Vite dev server instead of serving dist.
+[dev]
+command = "npm run dev"
+targetPort = 5173
+
+# SPA fallback: any path with no matching file in dist/ serves index.html
+# with a 200 so React Router can read the original URL and match it.
+# Must be last — Netlify checks real files first, then rules top-down.
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
