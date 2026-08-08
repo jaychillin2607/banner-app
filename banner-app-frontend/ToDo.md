@@ -9,6 +9,8 @@
 ## P1
 - when display orientation is changed, safari sometimes doesn't fire any event and the navbar is not removed
 - improve SEO
+- integrate pre-render 
+- integrate react router ✅
 - figure a way to find out what system's  the banner is being accessed from [DESKTOP/ TABLE/ SMARTPHONE] ✅
 
 ## P2
