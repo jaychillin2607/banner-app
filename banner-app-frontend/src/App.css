@@ -34,7 +34,7 @@
 
 #root {
 	height: 100dvh;
-	background-color: black;
+	padding-top: env(safe-area-inset-top);
 }
 
 #app {
@@ -45,6 +45,8 @@
 
 .header {
 	/* display: flex */
+	position: sticky;
+	top: 0;
 	height: 5vh;
 	min-height: 40px;
 	max-height: 54px;
@@ -64,6 +66,8 @@
 	max-width: 40%;
 	background: none;
 	border: none;
+	text-decoration: none;
+	color: inherit;
 }
 
 .logo-image {
@@ -83,8 +87,22 @@
 }
 
 .pageLink {
+	padding: 0px 2px;
+}
+.pageLink > a {
+	display: block;
 	padding: 5px 10px;
 	text-decoration: underline;
+	color: inherit;
+}
+
+.pageLink:first-child {
+	border-right: 1px solid #666;
+}
+
+.pageLink > a:hover {
+	background-color: rgba(3, 3, 3, 0.2);
+	border-radius: 5px;
 }
 
 .page {

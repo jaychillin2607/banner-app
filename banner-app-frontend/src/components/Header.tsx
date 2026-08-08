@@ -1,27 +1,17 @@
-import type { PageType } from "../types/types";
+import { Link } from "react-router";
 
 import Navbar from "./Navigation";
 import Box from "./Box";
 
-function Header({
-	setCurrentPage,
-}: {
-	setCurrentPage: (page: PageType) => void;
-}) {
+function Header() {
 	return (
 		<header className="header">
 			<Box className="navbar">
-				<a
-					className="logo flex-row-center"
-					onClick={() => {
-						setCurrentPage("BANNER");
-					}}
-				>
+				<Link to="/" className="logo flex-row-center">
 					<img src="/favicon.svg" alt="banner icon" className="logo-image" />
 					<h1 className="logo-name">Banner</h1>
-				</a>
-
-				<Navbar setCurrentPage={setCurrentPage} />
+				</Link>
+				<Navbar />
 			</Box>
 		</header>
 	);
