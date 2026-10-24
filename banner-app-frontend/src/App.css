@@ -16,6 +16,14 @@
 	align-items: center;
 }
 
+.flex-row-grow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -29,7 +37,7 @@
 }
 
 .sticky-bottom {
-	align-self: center;
+	margin-bottom: 10px;
 }
 
 #root {
@@ -142,7 +150,7 @@
 	font-size: 18px;
 	width: 95%;
 	outline: none;
-	margin: 5px auto;
+	margin: 5px;
 	border-width: 3px;
 	border-color: #fbec5d;
 	border-radius: 3px;
@@ -154,4 +162,16 @@
 	height: 100%;
 	width: 100%;
 	border-top: solid #bbb 1px;
+}
+
+.input-clear-button {
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+	border-width: 3px;
+	border-color: #fbec5d;
+	border-radius: 3px;
+	background-color: #fbec5d;
+	margin: 5px 5px 5px 0px;
+	padding: 0px 5px;
 }
