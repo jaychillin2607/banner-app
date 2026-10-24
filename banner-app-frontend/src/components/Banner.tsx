@@ -77,18 +77,24 @@ function Banner() {
 					{bannerInputValue ? bannerMessage : placeholderMessage}
 				</Box>
 			</section>
-			<input
-				id="banner-input"
-				name="banner-input"
-				className={inputWidgetClassNames}
-				onChange={updateBannerOnTyping}
-				onFocus={() => {
-					setIsBannerInputFocused(true);
-				}}
-				onBlur={() => {
-					setIsBannerInputFocused(false);
-				}}
-			></input>
+			<Box className={`flex-row-grow ${inputWidgetClassNames}`}>
+				<input
+					id="banner-input"
+					name="banner-input"
+					value={bannerInputValue}
+					onChange={updateBannerOnTyping}
+					onFocus={() => setIsBannerInputFocused(true)}
+					onBlur={() => setIsBannerInputFocused(false)}
+				></input>
+				<button
+					type="button"
+					className="input-clear-button"
+					onMouseDown={(e) => e.preventDefault()}
+					onClick={() => setBannerInputValue("")}
+				>
+					X
+				</button>
+			</Box>
 		</>
 	);
 }

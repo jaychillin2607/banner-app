@@ -49,3 +49,10 @@
 - currentPage state is also ditched.
 
 ### Fixed
+
+## 0.1.1 - 24-October-2-26
+
+### Added
+
+- clear-all button for banner input widget
+- CLAUDE.md file to instruct claude bot to not read project files unnecessarily
